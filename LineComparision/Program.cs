@@ -10,7 +10,9 @@ namespace LineComparision
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("WELCOME TO LINE COMPARISION");
             LineBase lineBase = new LineBase();
-            lineBase.Line();        }
+            lineBase.Line();        
+        }
     }
 }
