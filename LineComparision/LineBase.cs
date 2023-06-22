@@ -20,8 +20,8 @@ namespace LineComparision
             double x_two = Convert.ToDouble(Console.ReadLine());
             double y_two = Convert.ToDouble(Console.ReadLine());
            
-            double length_one = Math.Sqrt(Math.Pow(x_two - x_one, 2) + Math.Pow(y_two - y_one, 2));
-            Console.WriteLine("The length of the line is: " + length_one);
+            double length_one = Math.Sqrt(Math.Pow((x_two - x_one), 2) + Math.Pow((y_two - y_one), 2));
+            Console.WriteLine("The length of the line1 is: " + length_one);
 
             // Get the coordinates of the two points from the user for LINE2
             Console.WriteLine("Enter Cordinate For LINE2");
@@ -33,16 +33,20 @@ namespace LineComparision
             double a_two = Convert.ToDouble(Console.ReadLine());
             double b_two = Convert.ToDouble(Console.ReadLine());
 
-            double length_two = Math.Sqrt(Math.Pow(a_two - a_one, 2) + Math.Pow(b_two - b_one, 2));
-            Console.WriteLine("The length of the line is: " + length_two);
+            double length_two = Math.Sqrt(Math.Pow((a_two - a_one), 2) + Math.Pow((b_two - b_one), 2));
+            Console.WriteLine("The length of the line2 is: " + length_two);
 
-            if(length_one == length_two)
+            if (length_one == length_two)
             {
-                Console.WriteLine( "BOTH LINES ARE EQUAL" );
+                Console.WriteLine( "Both Lines are Equal" );
+            }
+            else if (length_one > length_two)
+            {
+                Console.WriteLine("Line1 is greater than Line2");
             }
             else
             {
-                Console.WriteLine("BOTH LINES ARE NOT EQUAL");
+                Console.WriteLine("Line1 is less than Line2");
             }
         }
     }
