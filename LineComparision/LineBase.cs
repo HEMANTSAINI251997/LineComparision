@@ -19,9 +19,10 @@ namespace LineComparision
             Console.WriteLine("Enter the coordinates of the second point (x2, y2):");
             double x_two = Convert.ToDouble(Console.ReadLine());
             double y_two = Convert.ToDouble(Console.ReadLine());
-           
+
             double length_one = Math.Sqrt(Math.Pow((x_two - x_one), 2) + Math.Pow((y_two - y_one), 2));
             Console.WriteLine("The length of the line1 is: " + length_one);
+
             // Get the coordinates of the two points from the user for LINE2
             Console.WriteLine("Enter Cordinate For LINE2");
             Console.WriteLine("Enter the coordinates of the first point (A1, B1):");
@@ -39,11 +40,14 @@ namespace LineComparision
             {
                 Console.WriteLine("Both Lines are Equal");
             }
+            else if (length_one > length_two)
+            {
+                Console.WriteLine("Line1 is greater than Line2");
+            }
             else
             {
-                Console.WriteLine("Both Lines are Not Equals");
+                Console.WriteLine("Line1 is less than Line2");
             }
-
         }
     }
 }
